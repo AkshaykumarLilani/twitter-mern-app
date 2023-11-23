@@ -1,0 +1,52 @@
+POST http://localhost:3000/user/register
+Content-Type: application/json
+
+{
+    "name":"Akshay Lilani",
+    "email": "akshay@gmail.com",
+    "password": "akshay",
+    "gender": "MALE"
+}
+
+###
+POST http://localhost:3000/user/login
+Content-Type: application/json
+
+{
+    "email": "akshay@gmail.com",
+    "password": "akshay"
+}
+
+# -------------------- Tweet Routes ---------------------
+###
+# Get all Tweets
+GET http://localhost:3000/tweet?category="education"
+Content-Type: application/json
+
+###
+# Create a new Tweet
+POST http://locahost:3000/tweet
+Content-Type: application/json
+
+{
+    "user": "id",
+    "title": "title",
+    "body": "body",
+    "category": "education"
+}
+
+###
+# Update a Tweet
+PATCH http://locahost:3000/tweet/id
+Content-Type: application/json
+
+{
+    "title": "title",
+    "body": "body",
+    "category": "education"
+}
+
+###
+# Update a Tweet
+DELETE http://locahost:3000/tweet/id
+Content-Type: application/json
